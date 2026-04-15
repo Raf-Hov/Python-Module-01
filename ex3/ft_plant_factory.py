@@ -10,12 +10,6 @@ class Plant:
         print("Created:", end=" ")
         print(f"{self.plant}: {round(self.cm, 2)}cm, {self.days} days old")
 
-    def grow(self) -> None:
-        self.cm += self.grow_rate
-
-    def age(self) -> None:
-        self.days += 1
-
 
 if __name__ == "__main__":
     plant1 = Plant("Rose", 25.0, 30)
