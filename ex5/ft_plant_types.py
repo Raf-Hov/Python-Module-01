@@ -3,6 +3,7 @@
 class Plant:
     def __init__(self, plant: str, cm: float, days: int):
         self._plant = plant
+        self._cur = cm
         if cm < 0:
             print(f"{self._plant} Error, height can't be negative")
             print("Height update rejected")
@@ -42,7 +43,7 @@ class Plant:
         return self._days
 
     def show(self) -> None:
-        print(f"{self._plant}: {round(self._cm, 2)}cm, {self._days} days old")
+        print(f"{self._plant}: {round(self._cur, 2)}cm, {self._days} days old")
 
     def current(self) -> None:
         print("Current state: ", end="")
