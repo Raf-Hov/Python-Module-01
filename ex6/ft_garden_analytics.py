@@ -60,7 +60,7 @@ class Plant:
             print(f"{self._plant} plant:", end=" ")
             print(f"{round(self._cur, 2)}cm, {self._cura} days old")
         else:
-            print(f"{self._plant} ", end=" ")
+            print(f"{self._plant}:", end=" ")
             print(f"{round(self._cur, 2)}cm, {self._cura} days old")
 
     def past(self) -> None:
@@ -166,7 +166,7 @@ class Vegetable(Plant):
 
     def show(self) -> None:
         super().show()
-        super()._shade += 1
+        self._shade += 1
         print(f"Harvest season: {self._harvest_season}")
         print(f"Nutritional value: {self._nutritional_value}")
 
